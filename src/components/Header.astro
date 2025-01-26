@@ -1,0 +1,71 @@
+---
+
+---
+
+<header>
+	<div>
+		<img src="/logo.avif" alt="Menorca Pro">
+		<nav>
+			<a href="#inicio">Inicio</a>
+			<a href="#catalogo">Catlálogo</a>
+			<a href="#newsletter">Newsletter</a>
+			<a href="#contacto" class="header-nav__contacto">Hablemos</a>
+		</nav>
+	</div>
+</header>
+
+<style>
+	
+header {
+	width: 100%;
+	background-color: var(--color-white);
+	height: 90px;
+
+	display: flex;
+	align-items: center;
+}
+
+header div {
+	max-width: 1200px;
+	width: 90%;
+	margin: auto;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header img {
+	width: 135px;
+	height: auto;
+}
+
+header nav {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+header nav a {
+	color: var(--color-grey);
+	text-decoration: none;
+	font-size: 16px;
+}
+
+header nav a:hover {
+	text-decoration: underline;
+}
+
+header nav a.header-nav__contacto {
+	background-color: var(--color-red);
+	color: var(--color-white);
+	padding: 8px 20px;
+	margin-left: 10px;
+}
+
+header nav a.header-nav__contacto:hover {
+	background-color: var(--color-red-hover);
+}
+
+</style>
