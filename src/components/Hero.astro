@@ -1,0 +1,77 @@
+---
+---
+
+<header>
+    <div class="header-image">
+        <img src="/menorca.webp" alt="Menorca Pro">
+    </div>
+    <div class="header-text">
+        <h1 class="header-text__subtitle">¿Quieres una web para tu restaurante pero no sabes por donde empezar?</h1>
+        <p class="header-text__title"><span>Tranquilo...</span>Tenemos justo lo que necesitas</p>
+        <a class="header-text__button" href="#planes">¿QUÉ OFRECEMOS?</a>
+    </div>
+</header>
+
+<style>
+    header {
+        width: 90%;
+        max-width: 1500px;
+        margin: auto;
+        padding: 50px 0;
+        
+        display: flex;
+        gap: 40px;
+    }
+
+    .header-image {
+        background-color: var(--color-red);
+        padding-top: 50px;
+        width: 40%;
+
+        display: flex;
+    }
+
+    .header-image img {
+        width: 100%;
+    }
+
+    .header-text {
+        padding: 30px;
+        width: 60%;
+        background-color: var(--color-yellow);
+    }
+
+    .header-text__subtitle {
+        text-align: right;
+        justify-self: right;
+        width: 80%;
+        font-size: 1.5rem
+    }
+
+    .header-text__title {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .header-text__title span {
+        font-size: 1.5rem;
+        display: block;
+        margin-bottom: -0.3rem;
+    }
+
+    .header-text__button {
+        text-decoration: none;
+        color: var(--color-white);
+        font-size: 1.5rem;
+        background-color: var(--color-green);
+        padding: 5px 35px;
+
+        transition: all .2s;
+    }
+
+    .header-text__button:hover {
+        padding: 5px 38px;
+    }
+</style>

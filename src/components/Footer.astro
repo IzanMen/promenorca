@@ -3,9 +3,75 @@
 ---
 
 <footer>
-    
+    <div>
+        <img src="/logo.avif" alt="Menorca Pro">
+        <ul>
+            <li>Legal</li>
+            <li><a href="#politica-de-privacidad">Política de Privacidad</a></li>
+            <li><a href="#aviso-legal">Aviso Legal</a></li>
+            <li><a href="#politica-de-cookies">Política de Cookies</a></li>
+        </ul>
+        <ul>
+            <li>¿Qué plan necesitas?</li>
+            <li><a href="#plan-básico">El que no corre vuela - 30€ / mes</a></li>
+            <li><a href="#plan-intermedio">Único en su salsa - 100€ + 30€ / mes</a></li>
+            <li><a href="#plan-profesional">Mesa para todos - 600€ + 30€ / mes</a></li>
+        </ul>
+        <ul>
+            <li>Contacta con nosotros</li>
+            <li><a href="mailto:hola@promenorca.com">hola@promenorca.com</a></li>
+            <li><a href="#instagram">@promenorca</a></li>
+            <li><a href="#formulario">Formulario de contacto</a></li>
+        </ul>
+    </div>
 </footer>
 
 <style>
-	
+	footer {
+        width: 100%;
+        background-color: var(--color-red);
+        height: 400px;
+        margin-top: 200px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div {
+        max-width: 1500px;
+        width: 90%;
+        margin: auto;
+        height: 100%;
+        padding: 50px 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+    }
+
+    img {
+        width: 200px;
+        height: auto;
+        align-self: start;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    li {
+        color: var(--color-white);
+        text-decoration: none;
+        font-size: 1.2rem; 
+    }
+
+    a {
+        color: var(--color-white);
+        text-decoration: none;
+        font-size: 1rem;
+    }
 </style>

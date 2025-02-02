@@ -1,0 +1,291 @@
+---
+import PlanListIcon from './PlanListIcon.astro';
+import DefaultButton from './DefaultButton.astro';
+
+interface Props {
+    id: string;
+}
+
+const { id } = Astro.props;
+---
+
+{( id === '1' ) && 
+
+<div class="plan plan-basic">
+    <span class="triangle"></span>
+    <div>
+        <h3 class="plan-title">El que no corre vuela</h3>
+        <p class="plan-subtitle">👉 Tu web lista en tiempo récord</p>
+        <span class="plan-price">30€ <p>cada mes</p></span>
+        <ul class="plan-first-list">
+            <li>
+                <PlanListIcon />
+                <p>web basada en uno de nuestros prototipos</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>personalización básica: logo, menú, texto e imágenes</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>dominio y alojamiento incluido</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>mantenimiento básico incluido (modificaciones en la carta, precios, etc.)</p>
+            </li>
+        </ul>
+        <ul class="plan-second-list">
+            <li>
+                <PlanListIcon />
+                <p>lanzamiento rápido</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>fácil gestión (nos pasas la información y nosotros te gestionamos el resto)</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>presencia en los resultados de búsqueda de google</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>costo accesible (2 menús al mes;)</p>
+            </li>
+        </ul>
+        <span class="plan-question">
+            <p>¿Es esto lo que buscabas?</p>
+            <DefaultButton color='green' link="" text="contacta con nosotros" />    
+        </span>
+    </div>
+</div>
+
+}
+
+{( id === '2' ) && 
+
+<div class="plan plan-intermediate">
+    <span class="triangle"></span>
+    <div>
+        <h3 class="plan-title">Único en su salsa</h3>
+        <p class="plan-subtitle">👉 Diseño exclusivo, hecho solo para ti.</p>
+        <span class="plan-price">100€ <p>+ 30€ cada mes</p></span>
+        <ul class="plan-first-list">
+            <li>
+                <PlanListIcon />
+                <p>web basada en uno de nuestros prototipos</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>personalización básica: logo, menú, texto e imágenes</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>dominio y alojamiento incluido</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>mantenimiento básico incluido (modificaciones en la carta, precios, etc.)</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>prototipo exclusivo que nadie más usará</p>
+            </li>
+        </ul>
+        <ul class="plan-second-list">
+            <li>
+                <PlanListIcon />
+                <p>lanzamiento rápido</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>fácil gestión (nos pasas la información y nosotros te gestionamos el resto)</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>presencia en los resultados de búsqueda de google</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>diseño único en tu restaurante, sin competencia visual</p>
+            </li>
+        </ul>
+        <span class="plan-question">
+            <p>¿Es esto lo que buscabas?</p>
+            <DefaultButton color='yellow' link="" text="contacta con nosotros" />    
+        </span>
+    </div>
+</div>
+
+}
+
+{( id === '3' ) && 
+
+<div class="plan plan-advanced">
+    <span class="triangle"></span>
+    <div>
+        <h3 class="plan-title">Mes para todos</h3>
+        <p class="plan-subtitle">👉 Diseño exclusivo + sistema de reservas.</p>
+        <span class="plan-price">600€ <p>+ 30€ cada mes</p></span>
+        <ul class="plan-first-list">
+            <li>
+                <PlanListIcon />
+                <p>web basada en uno de nuestros prototipos</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>personalización básica: logo, menú, texto e imágenes</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>dominio y alojamiento incluido</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>mantenimiento básico incluido (modificaciones en la carta, precios, etc.)</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>prototipo exclusivo que nadie más usará</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>sistema de gestión de reservas</p>
+            </li>
+        </ul>
+        <ul class="plan-second-list">
+            <li>
+                <PlanListIcon />
+                <p>fácil gestión (nos pasas la información y nosotros te gestionamos el resto)</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>presencia en los resultados de búsqueda de google</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>diseño único en tu restaurante, sin competencia visual</p>
+            </li>
+            <li>
+                <PlanListIcon />
+                <p>sistema reservas integrado que facilita la gestión de mesas i mejora la experiencia de tus clientes </p>
+            </li>
+        </ul>
+        <span class="plan-question">
+            <p>¿Es esto lo que buscabas?</p>
+            <DefaultButton color='red' link="" text="contacta con nosotros" />    
+        </span>
+    </div>
+</div>
+
+}
+
+
+<style>
+    .plan {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-red);
+        height: 1000px;
+        padding-top: 70px;
+        position: relative;
+        width: 100%;
+    }
+
+    .plan-basic {
+        background-color: var(--color-green);
+    }
+
+    .plan-intermediate {
+        background-color: var(--color-yellow);
+    }
+
+    .plan-advanced {
+        background-color: var(--color-red);
+    }
+
+    .triangle {
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 50px solid var(--color-white);
+        position: absolute;
+        top: 45px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .plan div {
+        height: 930px;
+        background-color: var(--color-white);
+        z-index: 100;
+        padding: 0 20px;
+        position: relative;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .plan-title {
+        font-size: 2rem;
+    }
+
+    .plan-price {
+        font-size: 3.5rem;
+        margin-top: 60px;
+        display: inline-block;
+        width: 100%;
+        line-height: 2.5rem;
+        border-bottom: 1px solid var(--color-green);
+        margin-bottom: 50px;
+    }
+    
+    .plan-price p {
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    .plan-first-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-bottom: 1px solid var(--color-green);
+        padding-bottom: 20px;
+    }
+
+    .plan-first-list li {
+        display: flex;
+        gap: 7px;
+    }
+
+    .plan-first-list li p {
+        line-height: 1rem;
+    }
+
+    .plan-second-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .plan-second-list p {
+        line-height: 1rem;
+    }
+
+    .plan-second-list li {
+        display: flex;
+        gap: 7px;
+    }
+
+    .plan-question {
+        position: absolute;
+        bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+</style>
