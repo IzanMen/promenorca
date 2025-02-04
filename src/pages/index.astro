@@ -2,15 +2,36 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Planes from '../components/Planes.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Catalogo from '../components/Catalogo.astro';
+import FAQS from '../components/FAQS.astro';
 ---
 
 <Layout>
     <main>
         <Hero />
         <Planes />
-        
+        <section>
+            <h2>¿Ninguno de estos planes de ajusta a lo que buscas?</h2>
+            <p>No importa, cuéntanos lo que quieres y nosotros te ofrecemos una solución.</p>
+            <ContactForm campos={["restaurant"]} messagePlaceholder="Mi restaurante necesita una web que tenga..." />    
+        </section>
+        <Catalogo />
+        <FAQS />
     </main>
 </Layout>
 
 <style>
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        padding-top: 80px;
+        line-height: 3rem;
+
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.3rem;
+    }
 </style>

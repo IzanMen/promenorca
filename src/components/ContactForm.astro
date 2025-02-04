@@ -1,0 +1,169 @@
+
+---
+interface Props {
+    messagePlaceholder: string;
+    campos: string[];
+}
+
+const props = Astro.props as Props;
+
+const restaurantAndProto = props.campos.includes("restaurant") && props.campos.includes("proto");
+---
+
+<form action="" class="form">
+    <div class="form-first-row">
+        <input type="text" name="name" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+    </div>
+
+    {restaurantAndProto && (
+        <div class="form-second-row">
+            <input type="text" name="restaurant" placeholder="Nombre del restaurante" required>
+            <input type="text" name="proto" placeholder="Nombre del prototipo" required>
+        </div> 
+    )}
+
+    {props.campos.includes("plan") && (
+        <div class="form-plan">
+            <p>Selecciona el plan:</p>
+            <div class="form-plan-options">
+                <label class="plan-option">
+                    <input type="radio" name="plan" value="basico" required>
+                    <span class="button">Plan Básico</span>
+                </label>
+
+                <label class="plan-option">
+                    <input type="radio" name="plan" value="avanzado" required>
+                    <span class="button">Plan Avanzado</span>
+                </label>
+
+                <label class="plan-option">
+                    <input type="radio" name="plan" value="premium" required>
+                    <span class="button">Plan Premium</span>
+                </label>
+            </div>
+        </div>
+    )}
+
+    <textarea name="message" placeholder={props.messagePlaceholder} required></textarea>
+    <button type="submit">Enviar</button>
+</form>
+
+<style>
+    .form {
+        width: 800px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        padding: 30px 40px;
+        background-color: var(--color-white);
+        border-radius: 10px;
+    }
+
+    .form-first-row {
+        display: flex;
+        gap: 10px;
+    }
+
+    .form-first-row input:first-child {
+        flex: 6;
+    }
+
+    .form-first-row input:last-child {
+        flex: 7;
+    }
+
+    .form-second-row {
+        display: flex;
+        gap: 10px;
+    }
+
+    .form-second-row input:first-child {
+        flex: 7;
+    }
+
+    .form-second-row input:last-child {
+        flex: 6;
+    }
+
+    .form-plan {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        color: #0000008c;
+    }
+
+    .form-plan-options {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap; 
+        width: 100%;
+    }
+
+    .plan-option {
+        display: inline-block;
+        flex: 1 1 calc(33.33% - 10px);
+    }
+
+    .plan-option input {
+        display: none; 
+    }
+
+    .button {
+        display: block;
+        width: 100%; 
+        padding: 5px 10px;
+        border: 1px solid var(--color-grey);
+        color: #0000008c;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .button:hover {
+        background-color: var(--color-grey);
+        color: var(--color-white);
+    }
+
+    .plan-option input:checked + .button {
+        background-color: var(--color-yellow);
+        color: var(--color-grey);
+        border-color: var(--color-yellow);
+    }
+
+    input {
+        padding: 5px 10px;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-grey);
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    textarea {
+        padding: 5px 10px;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-grey);
+        resize: none;
+        height: 120px;
+    }
+
+    textarea:focus {
+        outline: none;
+    }
+
+    button {
+        width: 150px;
+        padding: 5px 10px;
+        background-color: var(--color-green);
+        border: none;
+        color: #fff;
+    }
+
+    button:hover {
+        background-color: var(--color-green-hover);
+    }
+</style>

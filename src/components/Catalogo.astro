@@ -1,0 +1,33 @@
+---
+import Prototipos from '../components/Prototipos.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<section class="catalogo">
+    <h2>Catálogo</h2>
+    <Prototipos />
+    <h3>¿Ya has encontrado tu prototipo ideal?</h3>
+    <p>Una vez completes el formulario, nos pondremos en contacto contigo para comenzar a trabajar en tu proyecto y entregártelo lo antes posible.</p>
+    <ContactForm campos={["restaurant", "proto", "plan"]} messagePlaceholder="Mi restaurante necesita una web que tenga..." />    
+</section>
+
+<style>
+    .catalogo {
+        width: 90%;
+        max-width: 1500px;
+        margin: auto;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    h3 {
+        margin-top: 100px;
+        font-size: 2rem;
+    }
+
+    p {
+        width: 630px;
+        margin: auto;
+        line-height: 1.2rem;
+    }
+</style>

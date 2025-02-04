@@ -1,0 +1,68 @@
+---
+import prototipos from '../data/prototipos.json';
+---
+
+<div class="prototipos">
+    {Object.keys(prototipos).map((key, index) => (
+        <div class:list={{
+            "yellow-bg": index % 2 === 0,
+            "red-bg": index % 2 !== 0
+        }}>
+            <h3>{prototipos[key as keyof typeof prototipos].title}</h3>
+            <img src={prototipos[key as keyof typeof prototipos].image} alt={prototipos[key as keyof typeof prototipos].title} />
+            <a href={prototipos[key as keyof typeof prototipos].link} target="_blank">Ver prototipo</a>
+        </div>
+    ))}
+</div>
+
+<style>
+    .prototipos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 50px;
+        gap: 20px;
+    }
+
+    .prototipos div {
+        border-radius: 10px;
+        padding: 15px;
+        padding-bottom: 60px;
+        position: relative;
+    }
+
+    /* Colores alternados */
+    .red-bg {
+        background-color: var(--color-red);
+    }
+
+    .yellow-bg {
+        background-color: var(--color-yellow);
+    }
+
+    .prototipos div h3 {
+        text-align: left;
+    }
+
+    .prototipos div img {
+        width: 100%;
+        object-fit: cover;
+        border: 1px solid var(--color-grey);
+        border-radius: 10px;
+    }
+
+    .prototipos div a {
+        text-decoration: none;
+        color: #fff;
+        background-color: var(--color-green);
+        padding: 5px 10px;
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        border-radius: 10px;
+        width: 150px;
+    }
+
+    .prototipos div a:hover {
+        background-color: var(--color-green-hover);
+    }
+</style>
