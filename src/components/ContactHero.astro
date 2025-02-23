@@ -1,0 +1,97 @@
+---
+import ContactForm from "./ContactForm.astro"
+---
+
+<header>
+    <div class="header-text">
+        <h1 class="header-text__title">¿Tienes alguna duda o consulta?</h1>
+        <p class="header-text__subtitle">Estamos aquí para ayudarte. Completa el formulario y te proporcionaremos toda la información que necesites.</p>
+    </div>
+    <div class="header-form">
+        <ContactForm campos={["name", "email", "message"]} messagePlaceholder="Consúltanos lo que necesites..." />
+    </div>
+</header>
+
+<style>
+    header {
+        width: 90%;
+        max-width: 1500px;
+        margin: auto;
+        padding: 50px 0;
+        
+        display: flex;
+        gap: 40px;
+        margin-top: 90px;
+    }
+
+    .header-text {
+        padding: 30px;
+        width: 40%;
+        background-color: var(--color-yellow);
+    }
+
+    .header-text__subtitle {
+        width: 80%;
+        font-size: 1.5rem
+    }
+
+    .header-text__title {
+        text-align: right;
+        justify-self: right;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .header-form {
+        background-color: var(--color-white);
+        width: 60%;
+        object-fit: cover;
+    }
+
+    @media screen and (max-width: 1550px) {
+        .header-form {
+            width: 50%;
+        }
+
+        .header-text {
+            width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 1230px) {
+        .header-form {
+            width: 40%;
+        }
+
+        .header-text {
+            width: 60%;
+        }
+    }
+
+    @media screen and (max-width: 1010px) {
+        .header-text__subtitle {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+        }
+
+        .header-text__title {
+            font-size: 1.8rem;
+            line-height: 1.7rem;
+        }
+
+        header {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .header-form {
+            width: 100%;
+        }
+
+        .header-text {
+            width: 100%;
+        }
+    }
+</style>

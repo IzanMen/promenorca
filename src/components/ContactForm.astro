@@ -74,11 +74,19 @@ const restaurantAndProto = props.campos.includes("restaurant") && props.campos.i
         padding: 30px 40px;
         background-color: var(--color-white);
         border-radius: 10px;
+
+        container-type: inline-size;
     }
 
     .form-first-row {
         display: flex;
         gap: 10px;
+    }
+
+    @container (max-width: 400px) {
+        .form-first-row {
+            flex-direction: column;
+        }
     }
 
     .form-first-row input:first-child {
