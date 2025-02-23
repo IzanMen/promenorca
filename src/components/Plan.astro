@@ -193,6 +193,12 @@ const { id } = Astro.props;
         min-width: 400px;
     }
 
+    @media screen and (max-width: 550px) {
+        .plan {
+            min-width: 100%;
+        }
+    }
+
     .plan-basic {
         background-color: var(--color-green);
     }
