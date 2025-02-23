@@ -1,0 +1,31 @@
+---
+import ContactForm from "./ContactForm.astro"
+---
+
+<section class="newsletter" id="newsletter">
+    <h2>Newsletter</h2>
+    <p>Suscríbete para estar al día con nuestras últimas novedades y actualizaciones. ¡No te pierdas nada!<p>
+    <ContactForm campos={["email"]} />
+</section>
+
+<style>
+    .newsletter {
+        width: 90%;
+        max-width: 1500px;
+        margin: auto;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .newsletter h2 {
+        margin-top: 100px;
+        font-size: 2rem;
+    }
+
+    p {
+        width: 630px;
+        max-width: 100%;
+        margin: auto;
+        line-height: 1.2rem;
+    }
+</style>

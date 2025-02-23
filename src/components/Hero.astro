@@ -21,12 +21,14 @@
         
         display: flex;
         gap: 40px;
+        margin-top: 90px;
     }
 
     .header-image {
         background-color: var(--color-red);
         padding-top: 50px;
         width: 40%;
+        object-fit: cover;
 
         display: flex;
     }
@@ -73,5 +75,31 @@
 
     .header-text__button:hover {
         padding: 5px 38px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .header-image {
+            display: none;
+        }
+
+        .header-text {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .header-text__subtitle {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+        }
+
+        .header-text__title {
+            font-size: 1.8rem;
+            line-height: 1.7rem;
+        }
+
+        .header-text__title span {
+            margin-bottom: 0;
+        }
     }
 </style>

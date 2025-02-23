@@ -30,5 +30,20 @@ import Plan from './Plan.astro';
         display: flex;
         justify-content: space-between;
         gap: 40px;
+
+        max-width: 100%;
+        overflow-x: auto;
+        margin: auto;
+    }
+
+    @media screen and (max-width: 1020px) {
+        .planes-list {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        section {
+            height: auto;
+        }
     }
 </style>

@@ -1,7 +1,6 @@
-
 ---
 interface Props {
-    messagePlaceholder: string;
+    messagePlaceholder?: string;
     campos: string[];
 }
 
@@ -12,7 +11,9 @@ const restaurantAndProto = props.campos.includes("restaurant") && props.campos.i
 
 <form action="" class="form">
     <div class="form-first-row">
-        <input type="text" name="name" placeholder="Nombre" required>
+        {props.campos.includes("name") && (
+            <input type="text" name="name" placeholder="Nombre" required>
+        )}
         <input type="email" name="email" placeholder="Correo electrónico" required>
     </div>
 
@@ -45,13 +46,18 @@ const restaurantAndProto = props.campos.includes("restaurant") && props.campos.i
         </div>
     )}
 
-    <textarea name="message" placeholder={props.messagePlaceholder} required></textarea>
+    {props.campos.includes("message") && (
+        <textarea name="message" placeholder={props.messagePlaceholder} required></textarea>
+    )}
+    
     <button type="submit">Enviar</button>
 </form>
+
 
 <style>
     .form {
         width: 800px;
+        max-width: 100%;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -78,6 +84,12 @@ const restaurantAndProto = props.campos.includes("restaurant") && props.campos.i
     .form-second-row {
         display: flex;
         gap: 10px;
+    }
+
+    @media screen and (max-width: 550px) {
+        .form-second-row {
+            flex-direction: column;
+        }
     }
 
     .form-second-row input:first-child {
