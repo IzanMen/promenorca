@@ -14,9 +14,9 @@ const { id } = Astro.props;
 <div class="plan plan-basic">
     <span class="triangle"></span>
     <div>
-        <h3 class="plan-title">El que no corre vuela</h3>
+        <h3 class="plan-title"><a href="/plan-basico">El que no corre vuela</a></h3>
         <p class="plan-subtitle">👉 Tu web lista en tiempo récord</p>
-        <span class="plan-price">30€ <p>cada mes</p></span>
+        <span style="position: relative;" class="plan-price">Gratis <p>hasta octurbe</p> <span class="lock-line"></span></span>
         <ul class="plan-first-list">
             <li>
                 <PlanListIcon />
@@ -24,7 +24,7 @@ const { id } = Astro.props;
             </li>
             <li>
                 <PlanListIcon />
-                <p>personalización básica: logo, menú, texto e imágenes</p>
+                <p>personalización avanzada: logo, menú, texto e imágenes</p>
             </li>
             <li>
                 <PlanListIcon />
@@ -32,7 +32,7 @@ const { id } = Astro.props;
             </li>
             <li>
                 <PlanListIcon />
-                <p>mantenimiento básico incluido (modificaciones en la carta, precios, etc.)</p>
+                <p>mantenimiento incluido (modificaciones en la carta, precios, etc.)</p>
             </li>
         </ul>
         <ul class="plan-second-list">
@@ -67,7 +67,7 @@ const { id } = Astro.props;
 <div class="plan plan-intermediate">
     <span class="triangle"></span>
     <div>
-        <h3 class="plan-title">Único en su salsa</h3>
+        <h3 class="plan-title"><a href="/plan-intermedio">Único en su salsa</a></h3>
         <p class="plan-subtitle">👉 Diseño exclusivo, hecho solo para ti.</p>
         <span class="plan-price">100€ <p>+ 30€ cada mes</p></span>
         <ul class="plan-first-list">
@@ -77,7 +77,7 @@ const { id } = Astro.props;
             </li>
             <li>
                 <PlanListIcon />
-                <p>personalización básica: logo, menú, texto e imágenes</p>
+                <p>personalización avanzada: logo, menú, texto e imágenes</p>
             </li>
             <li>
                 <PlanListIcon />
@@ -85,7 +85,7 @@ const { id } = Astro.props;
             </li>
             <li>
                 <PlanListIcon />
-                <p>mantenimiento básico incluido (modificaciones en la carta, precios, etc.)</p>
+                <p>mantenimiento incluido (modificaciones en la carta, precios, etc.)</p>
             </li>
             <li>
                 <PlanListIcon />
@@ -111,8 +111,8 @@ const { id } = Astro.props;
             </li>
         </ul>
         <span class="plan-question">
-            <p>¿Es esto lo que buscabas?</p>
-            <DefaultButton color='yellow' link="" text="contacta con nosotros" />    
+            <p>Lo sentimos, aún estamos trabajando en este plan...</p>
+            {/* <DefaultButton color='yellow' link="" text="contacta con nosotros" />     */}
         </span>
     </div>
 </div>
@@ -124,7 +124,7 @@ const { id } = Astro.props;
 <div class="plan plan-advanced">
     <span class="triangle"></span>
     <div>
-        <h3 class="plan-title">Mes para todos</h3>
+        <h3 class="plan-title"><a href="/plan-avanzado">Mesa para todos</a></h3>
         <p class="plan-subtitle">👉 Diseño exclusivo + sistema de reservas.</p>
         <span class="plan-price">600€ <p>+ 30€ cada mes</p></span>
         <ul class="plan-first-list">
@@ -134,7 +134,7 @@ const { id } = Astro.props;
             </li>
             <li>
                 <PlanListIcon />
-                <p>personalización básica: logo, menú, texto e imágenes</p>
+                <p>personalización avanzada: logo, menú, texto e imágenes</p>
             </li>
             <li>
                 <PlanListIcon />
@@ -142,7 +142,7 @@ const { id } = Astro.props;
             </li>
             <li>
                 <PlanListIcon />
-                <p>mantenimiento básico incluido (modificaciones en la carta, precios, etc.)</p>
+                <p>mantenimiento incluido (modificaciones en la carta, precios, etc.)</p>
             </li>
             <li>
                 <PlanListIcon />
@@ -172,8 +172,8 @@ const { id } = Astro.props;
             </li>
         </ul>
         <span class="plan-question">
-            <p>¿Es esto lo que buscabas?</p>
-            <DefaultButton color='red' link="" text="contacta con nosotros" />    
+            <p>Lo sentimos, aún estamos trabajando en este plan...</p>
+            {/* <DefaultButton color='red' link="" text="contacta con nosotros" />     */}
         </span>
     </div>
 </div>
@@ -182,6 +182,11 @@ const { id } = Astro.props;
 
 
 <style>
+    h3 a {
+        text-decoration: none;
+        color: var(--color-black);
+    }
+
     .plan {
         display: flex;
         flex-direction: column;

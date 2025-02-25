@@ -1,6 +1,8 @@
 ---
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,7 +13,8 @@ import Footer from "../components/Footer.astro"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 
-		<title>Impulsa tu negocio con nosotros, el mejor servicio de desarrollo web en Menorca</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
 	</head>
 	<body>
 		<Header />
@@ -30,12 +33,11 @@ import Footer from "../components/Footer.astro"
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		line-height: 2.2rem
+		line-height: 2.2rem;
 	}
 </style>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 
 html,
@@ -57,5 +59,4 @@ body {
 	--color-green-hover: #5E9B5A;
 	--color-red-hover: #D14E36;
 }
-
 </style>

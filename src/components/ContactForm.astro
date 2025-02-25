@@ -9,7 +9,7 @@ const props = Astro.props as Props;
 const restaurantAndProto = props.campos.includes("restaurant") && props.campos.includes("proto");
 ---
 
-<form action="" class="form">
+<form action="https://getform.io/f/aolmmveb" method="POST" class="form">
     <div class="form-first-row">
         {props.campos.includes("name") && (
             <input type="text" name="name" placeholder="Nombre" required>
@@ -37,18 +37,18 @@ const restaurantAndProto = props.campos.includes("restaurant") && props.campos.i
             <p>Selecciona el plan:</p>
             <div class="form-plan-options">
                 <label class="plan-option">
-                    <input type="radio" name="plan" value="basico" required>
-                    <span class="button">Plan Básico</span>
+                    <input type="radio" name="plan" value="El que no corre vuela" required>
+                    <span class="button">El que no corre vuela</span>
                 </label>
 
                 <label class="plan-option">
-                    <input type="radio" name="plan" value="avanzado" required>
-                    <span class="button">Plan Avanzado</span>
+                    <input type="radio" name="plan" value="Único en su salsa" required disabled>
+                    <span class="button button-disabled">Único en su salsa</span>
                 </label>
 
                 <label class="plan-option">
-                    <input type="radio" name="plan" value="premium" required>
-                    <span class="button">Plan Premium</span>
+                    <input type="radio" name="plan" value="Mesa para todos" required disabled>
+                    <span class="button button-disabled">Mesa para todos</span>
                 </label>
             </div>
         </div>
@@ -58,9 +58,9 @@ const restaurantAndProto = props.campos.includes("restaurant") && props.campos.i
         <textarea name="message" placeholder={props.messagePlaceholder} required></textarea>
     )}
     
+    <input type="hidden" name="_gotcha" style="display:none !important">
     <button type="submit">Enviar</button>
 </form>
-
 
 <style>
     .form {
@@ -207,3 +207,15 @@ const restaurantAndProto = props.campos.includes("restaurant") && props.campos.i
         background-color: var(--color-green-hover);
     }
 </style>
+
+<script>
+    const buttonDisabled = document.querySelectorAll(".button-disabled");
+
+    buttonDisabled.forEach(button => {
+        button.addEventListener("mouseover", () => {
+            button.textContent = "No disponible";
+        });
+    });
+
+
+</script>
