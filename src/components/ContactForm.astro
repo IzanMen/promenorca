@@ -56,13 +56,36 @@ const restaurantAndProto = props.campos.includes("restaurant") && props.campos.i
 
     {props.campos.includes("message") && (
         <textarea name="message" placeholder={props.messagePlaceholder} required></textarea>
-    )}
-    
+
+        <p class="legal">Usamos tus datos para gestionar tu consulta y, si lo aceptas, enviarte información comercial. Más info en la <a href="/legal/privacidad" target="_blank">Política de Privacidad</a></p>
+        <label class="legal">
+            <input type="checkbox" name="tratamiento de datos" required>
+            Acepto el tratamiento de mis datos para gestionar mi consulta
+        </label>
+        <label class="legal">
+            <input type="checkbox" name="newsletter">
+            Acepto recibir comunicaciones comerciales
+        </label>
+    )} 
+
+    {!props.campos.includes("message") && (
+        <p class="legal">Al rellenar este formulario, aceptas nuestra <a href="/legal/privacidad">Política de Privacidad</a>.</p>
+    )} 
+
+
+
+
     <input type="hidden" name="_gotcha" style="display:none !important">
     <button type="submit">Enviar</button>
 </form>
 
 <style>
+    .legal {
+        font-size: 0.9rem;
+        color: #000c;
+        text-align: left;
+        line-height: .9rem;
+    }
     .form {
         width: 800px;
         max-width: 100%;
