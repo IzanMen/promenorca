@@ -3,5 +3,10 @@
         "title": "La Tavola",
         "link": "https://la-tavola.vercel.app/",
         "image": "./prototipos/latavola.webp"
+    },
+    "2": {
+        "title": "True true",
+        "link": "https://true-true.vercel.app/",
+        "image": "./prototipos/true-true.webp"
     }
 }
