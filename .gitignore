@@ -25,6 +25,4 @@ pnpm-debug.log*
 
 # páginas bloqueadas
 
-src/pages/plan-basico.astro
-src/pages/plan-intermedio.astro
-src/pages/plan-avanzado.astro
+/src/pages/plan-*.astro
