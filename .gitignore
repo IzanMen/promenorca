@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# páginas bloqueadas
+
+.pages/plan-basico.astro/
+.pages/plan-intermedio.astro/
+.pages/plan-avanzado.astro/
